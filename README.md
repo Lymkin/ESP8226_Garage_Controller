@@ -5,7 +5,7 @@ door openers and is configurable for up to 3 doors.
 
 Integrates with any Home Automation system that supports REST API's
 
-Samples of the inteface can be found in the "info" folder.
+Samples of the inteface and Bill of Materials can be found in the "info" folder.
 
 The controller uses the following library: https://github.com/Lymkin/myWebServerAsync
 
