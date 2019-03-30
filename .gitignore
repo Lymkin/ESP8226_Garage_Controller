@@ -126,7 +126,6 @@ DocProject/Help/html
 
 # Click-Once directory
 publish/
-vscode/
 
 # Publish Web Output
 *.Publish.xml
@@ -146,6 +145,7 @@ AppPackages/
 
 # Others
 .vscode/
+vscode/
 sql/
 *.Cache
 ClientBin/
