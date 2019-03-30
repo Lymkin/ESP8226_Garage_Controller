@@ -1,0 +1,161 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<html>
+  <style>
+    body {
+        font-family: 'Roboto', serif;
+        font-size: 36px;
+    }
+  </style>
+  <body>
+    <div><center>Garage Doors</center></div>
+  </body>
+</html>
+
+<form action="">
+<center>
+<div class="ph-container">
+	<div id="door1enable" name="door1enable" class="ph-float">
+		<input type="button" id="door1name" name="door1name" hidden="hidden" onclick="parent.location='actuate?door1'"/>
+    </div>
+	<div id="door2enable" name="door2enable" class="ph-float">
+        <input type="button" id="door2name" name="door2name" hidden="hidden" onclick="parent.location='actuate?door2'"/>
+    </div>
+    <div id="door3enable" name="door3enable" class="ph-float">
+        <input type="button" id="door3name" name="door3name" hidden="hidden" onclick="parent.location='actuate?door3'"/>
+    </div> 
+</div>
+</center>
+</form>
+
+<style>
+.ph-button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;	   
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-table;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;	
+    font-family: "Roboto";
+    font-weight: 400;	
+    padding: 15px 39px 18px;
+    font-size: 18px;
+	height: 50px;
+	width: 250px;
+	}
+	
+/*Blue
+==========================*/
+.ph-btn-blue {
+
+    border-color: #03A9F4;
+	background-color: #03A9F4;
+
+}
+.ph-btn-blue:hover {
+    background-color: #03A9F4;
+    border-color: #03A9F4;
+}
+
+/*Grey
+==========================*/
+.ph-btn-grey {
+
+    background-color: #4e4e4e !important;
+    border-color: #4e4e4e !important;
+
+}
+.ph-btn-grey:hover {
+    background: none repeat scroll 0 0 #4e4e4e !important;
+    border-color: #4e4e4e !important;    
+}
+
+.ph-container {
+  display: table;
+  table-layout: auto;
+  width: 50px;
+}
+
+.ph-float {
+  float: left;
+  padding: 10px;  
+  text-align: center;
+  align: center;
+  width: 300px;
+}
+
+}
+</style>
+
+<script language="javascript">
+    setInterval(function(){
+        var xhr = new XMLHttpRequest();
+        var url = "/readjson?read=setup.json";
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var myArr = JSON.parse(xhr.responseText);
+                myFunction(myArr);
+            }
+        };
+        xhr.open("GET", url, true);
+        xhr.send();
+    }, 15000);
+</script>
+
+<script>
+var xhr = new XMLHttpRequest();
+var url = "/readjson?read=setup.json";
+
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        var myArr = JSON.parse(xhr.responseText);
+        myFunction(myArr);
+    }
+};
+xhr.open("GET", url, true);
+xhr.send();
+
+function myFunction(jsonData) {  //process the json from the ESP
+
+var jsonDataKeys = Object.keys(jsonData);
+for(var i=0; i<jsonDataKeys.length; i++){
+    var fields = document.getElementsByName(jsonDataKeys[i]);                      
+    for (var f=0; f<fields.length; f++){
+    var field=fields[f];
+	if (field.getAttribute('type')=='checkbox')                 
+                              {if (field.getAttribute('value')==jsonData[jsonDataKeys[i]])  field.setAttribute('checked','checked');                                   
+                              }     
+    else if (field.getAttribute('type')=='radio')                 
+                              {if (field.getAttribute('value')==jsonData[jsonDataKeys[i]])  field.setAttribute('checked','checked');                                         
+                               }                                         
+    else if (field.getAttribute('type')=='button') { 
+							    if (jsonData[jsonDataKeys[i+1]].includes('0')) {
+									field.setAttribute('class', 'ph-button ph-btn-grey'); 
+									field.setAttribute('value', jsonData[jsonDataKeys[i]] + ' - OPEN');
+								}
+								else { field.setAttribute('class', 'ph-button ph-btn-blue');
+									 field.setAttribute('value', jsonData[jsonDataKeys[i]] + ' - CLOSED');
+								}
+							   }//do nothing  
+    else   {field.value =  jsonData[jsonDataKeys[i]];}
+		{if (jsonData[jsonDataKeys[i]].includes('0')) {
+			field.setAttribute('hidden', 'hidden')}
+		}
+    } //for fields loop
+  }//for loop
+} //function
+</script>

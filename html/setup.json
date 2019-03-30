@@ -1,0 +1,22 @@
+{
+  "door1enable": "0",
+  "door1name": "",
+  "door1state": "1",
+  "door1relay": "0",
+  "door2enable": "0",
+  "door2name": "",
+  "door2state": "1",
+  "door2relay": "0",
+  "door3enable": "0",
+  "door3name": "",
+  "door3state": "1",
+  "door3relay": "0",
+  "safeip": "",
+  "safeport": "",
+  "method": "GET",
+  "openbody": "",
+  "closebody": "",
+  "door1url": "",
+  "door2url": "",
+  "door3url": ""
+}

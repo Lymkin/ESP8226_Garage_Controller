@@ -1,0 +1,38 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<style type="text/css">
+  form  { display: table;      }
+  p     { display: table-row;  }
+  label { display: table-cell; }
+  input { display: table-cell; }
+</style> 
+ 
+<h1>ESP Firmware Upgrade</h1>       
+<hr>
+1:  Press choose file and make sure you select the proper BIN file to flash. <br>
+2:  Press Update and wait for the flash to complete. <br><br>
+
+<form name="myForm" method='POST' action='/flashupdate' enctype='multipart/form-data' onsubmit="return validateForm()">
+	<table border="0"  cellspacing="0" cellpadding="3" style="width:400px" >
+		<input name="ffile" type='file' name='update'><br><br>
+    </table>                  
+
+<strong>Note:</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;During Upgrade DO NOT USE or access the ESP8266 Webserver.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not turn power off/on or reset.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wait until upload is complete and then the ESP8266 will auto-reset.<br><br>
+<input type='submit' value='Upload/Flash Firmware' style="width: 300px; height: 30px;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           
+<input action="action" type="button" value="Back" onclick="history.go(-1);" style="width: 100px; height: 30px;"/>                     
+</form>
+
+<script>
+
+function validateForm() {
+    var x = document.forms["myForm"]["ffile"].value;
+    if (x == null || x == "") {
+        alert("Must choose file first!");
+        return false;
+    } return true;
+}
+</script>

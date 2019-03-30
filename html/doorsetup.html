@@ -1,0 +1,372 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+	
+  
+    <script  type="text/javascript" src="/jquery.min.js"></script>	
+    <script  type="text/javascript" src="/bootstrap.min.js"></script>
+
+	<link  href="/bootstrap.min.css" rel="stylesheet" type="text/css">    
+	
+  </head><body>
+  <div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Garage Door Configuration</h3>
+              </div>
+              <div class="panel-body">
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <div class="col-sm-1">
+                      <label for="door1enable" class="control-label">Door 1</label>
+                    </div>
+                    <div class="col-sm-2">
+                      <select class="form-control" name="door1enable" id="door1enable" value="1">
+                        <option value="1">Enabled</option>
+                        <option value="0">Disable</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                        <label for="door1name" class="control-label">Name</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="door1name" id="door1name" placeholder="">
+                        <select id="door1state" name="door1state" value="1" hidden="hidden">
+                          <option value="1">CLOSED</option>
+                          <option value="0">OPEN</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-1">
+                        <label for="door1relay" class="control-label">Sensor</label>
+                    </div>
+                    <div class="col-sm-2">
+                      <select class="form-control" name="door1relay" id="door1relay" value="1">
+                        <option value="1">Normally Closed</option>
+                        <option value="0">Normally Open</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="col-sm-1">
+                        <label for="door2enable" class="control-label">Door 2</label>
+                      </div>
+                      <div class="col-sm-2">
+                        <select class="form-control" name="door2enable" id="door2enable" value="1">
+                          <option value="1">Enabled</option>
+                          <option value="0">Disable</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-1">
+                          <label for="door2name" class="control-label">Name</label>
+                      </div>
+                      <div class="col-sm-3">
+                          <input type="text" class="form-control" name="door2name" id="door2name" placeholder="">
+                          <select id="door2state" name="door2state" value="1" hidden="hidden">
+                            <option value="1">CLOSED</option>
+                            <option value="0">OPEN</option>
+                          </select>
+                      </div>
+                      <div class="col-sm-1">
+                          <label for="door2relay" class="control-label">Sensor</label>
+                      </div>
+                      <div class="col-sm-2">
+                        <select class="form-control" name="door2relay" id="door2relay" value="1">
+                          <option value="1">Normally Closed</option>
+                          <option value="0">Normally Open</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-1">
+                          <label for="door3enable" class="control-label">Door 3</label>
+                        </div>
+                        <div class="col-sm-2">
+                          <select class="form-control" name="door3enable" id="door3enable" value="1">
+                            <option value="1">Enabled</option>
+                            <option value="0">Disable</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-1">
+                            <label for="door3name" class="control-label">Name</label>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="door3name" id="door3name" placeholder="">
+                            <select id="door3state" name="door3state" value="1" hidden="hidden">
+                              <option value="1">CLOSED</option>
+                              <option value="0">OPEN</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-1">
+                            <label for="door3relay" class="control-label">Sensor</label>
+                        </div>
+                        <div class="col-sm-2">
+                          <select class="form-control" name="door3relay" id="door3relay" value="1">
+                            <option value="1">Normally Closed</option>
+                            <option value="0">Normally Open</option>
+                          </select>
+                        </div>
+                      </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Home Automation Configuration</h3>
+              </div>
+              <div class="panel-body">
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                      <div class="col-sm-2">
+                          <label for="safeip" class="control-label">Server IP</label>
+                      </div>
+                      <div class="col-sm-3">
+                          <input type="text" class="form-control" name="safeip" id="safeip" placeholder="">
+                      </div>
+                      <div class="col-sm-2">
+                          <label for="safeport" class="control-label">Port</label>
+                      </div>
+                      <div class="col-sm-3">
+                          <input type="text" class="form-control" name="safeport" id="safeport" placeholder="">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-2">
+                      <label for="method" class="control-label">Method</label>
+                    </div>
+                    <div class="col-sm-2">
+                      <select class="form-control" name="method" id="method" value="GET">
+                        <option value="GET">GET</option>
+                        <option value="PUT">PUT</option>
+                        <option value="POST">POST</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="col-sm-2">
+                          <label for="openbody" class="control-label">OPEN Body</label>
+                      </div>
+                      <div class="col-sm-3">
+                          <input type="text" class="form-control" name="openbody" id="openbody" placeholder="">
+                      </div>
+                      <div class="col-sm-2">
+                          <label for="closebody" class="control-label">CLOSE Body</label>
+                      </div>
+                      <div class="col-sm-3">
+                          <input type="text" class="form-control" name="closebody" id="closebody" placeholder="">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-2">
+                      <label class="control-label" for="door1url">Door 1 Url</label>
+                    </div>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="door1url" id="door1url" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-2">
+                      <label class="control-label" for="door2url">Door 2 Url</label>
+                    </div>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="door2url" id="door2url" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-2">
+                      <label class="control-label" for="door3url">Door 3 Url</label>
+                    </div>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="door3url" id="door3url" placeholder="">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Home Automation REST API URL's</h3>
+              </div>
+              <div class="panel-body">
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <div class="col-sm-4">
+                      <label class="control-label">Door 1 OPEN:HTTP_PUT /api/door1/state/open</label>
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="control-label">Door 1 CLOSE:HTTP_PUT /api/door1/state/close</label>
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="control-label">Door 1 STATE:HTTP_GET /api/door1/state</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-4">
+                      <label class="control-label">Door 2 OPEN:HTTP_PUT /api/door2/state/open</label>
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="control-label">Door 2 CLOSE:HTTP_PUT /api/door2/state/close</label>
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="control-label">Door 2 STATE:HTTP_GET /api/door2/state</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-4">
+                      <label class="control-label">Door 3 OPEN:HTTP_PUT /api/door3/state/open</label>
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="control-label">Door 3 CLOSE:HTTP_PUT /api/door3/state/close</label>
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="control-label">Door 3 STATE:HTTP_GET /api/door3/state</label>
+                    </div>
+                  </div>
+                    
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <a class="btn btn-block btn-danger btn-lg" id="savebut" name="savebut" onclick="SaveJson()">Save Changes</a>
+                </div>
+                <div class="form-group"> 
+                  <div id="restart" style="visibility:hidden;display:none;">
+                    <a class="btn btn-block btn-danger btn-lg" id="restartbut" name="restartbut" onclick="RestartESP()">Restart ESP</a>
+                  </div>
+                </div>   
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	   <br><br><br>
+    </div>
+</div>	
+
+<script>
+  function fillDocument(jsonData) {  //process the json from the ESP
+    var jsonDataKeys = Object.keys(jsonData);
+    for(var i=0; i<jsonDataKeys.length; i++){
+      var fields = document.getElementsByName(jsonDataKeys[i]);                        
+      for (var f=0; f<fields.length; f++){
+        var field=fields[f];
+        if (field.getAttribute('type')=='checkbox') {
+          if (field.getAttribute('value')==jsonData[jsonDataKeys[i]])  field.setAttribute('checked','checked');                                   
+        }     
+        else if (field.getAttribute('type')=='radio') {
+          if (field.getAttribute('value')==jsonData[jsonDataKeys[i]])  field.setAttribute('checked','checked');                                         
+        } 
+        else if (field.getAttribute('type')=='button') {
+          //do nothing
+        } 
+        else {
+          field.value =  jsonData[jsonDataKeys[i]];
+        }
+      } //for fields loop
+    } //for loop
+  } 
+</script>
+
+<script>
+	window.onload = function () {
+    var xhr = new XMLHttpRequest();
+    var url ="/readjson?read=setup.json";
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        var jsonArray = JSON.parse(xhr.responseText);
+        fillDocument(jsonArray);
+      }
+    };
+    xhr.open("GET", url, true);
+    xhr.send(null);
+  }																			  
+</script>
+
+<script>
+  function SaveJson() {
+    var inputs=document.getElementsByTagName("*")
+    inputs['savebut'].value="Restarting..."; 
+    var data = {};
+    var field;
+    var i;
+    for (i=0; i<inputs.length; i++) {
+      field = inputs[i];                   
+      if (field.tagName == 'INPUT' || field.tagName == 'SELECT') {
+        if (field.getAttribute('type') != undefined) {
+          if (field.getAttribute('type')=='checkbox') { 
+            if (field.checked) {
+              data[field.name] = field.value;
+            }
+          }     
+          else if (field.getAttribute('type')=='radio') {
+            if (field.checked) {
+              data[field.name] = field.value;
+            }
+          }      
+          else if (field.getAttribute('type')=='button') {
+            //do nothing
+          }
+          else {
+            data[field.name] = field.value;
+          }  //not checkbox          
+        }
+        else  {data[field.name] = field.value;}                          
+      } //not aninput or select so do nothing...                       
+    } //for loop
+
+    var xhr1 = new XMLHttpRequest();       
+    xhr1.open("GET","/pause", true);
+    xhr1.setRequestHeader("Content-type","text/plain");
+    xhr1.send(); 
+
+    var xhr = new XMLHttpRequest();
+    var url ="/savejson?save=setup.json";
+    xhr.open("POST", url, false);
+    xhr.setRequestHeader("Content-type", "application/json");
+//    alert(JSON.stringify(data));
+    xhr.send(JSON.stringify(data));  
+    alert("\nSystem Paused.....\n\nMust reboot for changes to take affect!");
+
+    var de=document.getElementById("restart"); 
+    de.style.visibility='visible';
+    de.style.display='inline';                    
+  }
+</script>
+
+<script>
+  function RestartESP() {
+    var xhr = new XMLHttpRequest();       
+    xhr.open("GET","/restartesp", true);
+    xhr.setRequestHeader("Content-type","text/plain");
+    xhr.send();
+  }
+</script>
+
+</body></html>
