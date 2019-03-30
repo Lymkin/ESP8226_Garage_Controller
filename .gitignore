@@ -145,6 +145,7 @@ csx
 AppPackages/
 
 # Others
+.vscode/
 sql/
 *.Cache
 ClientBin/
