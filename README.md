@@ -12,7 +12,7 @@ The controller uses the following library: https://github.com/Lymkin/myWebServer
 You can use a NodeMCU or my custom board that you can order from DirtyPCB's at:
 https://dirtypcbs.com/store/designer/details/10941/6271/esp8266-garage-controller
 
-A ProtoPak of 10 is $11:95 at the time I posted this.
+A ProtoPak of 10 is $11.95 at the time I posted this.
 
 
 **Home Assistant Integration Example:**
