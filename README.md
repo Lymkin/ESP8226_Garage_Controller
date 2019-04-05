@@ -1,4 +1,4 @@
-** ESP8226_Garage_Controller**
+#ESP8226_Garage_Controller
 
 This is an ESP8266 based controller for actuating your garage doors using your current garage
 door openers and is configurable for up to 3 doors.
