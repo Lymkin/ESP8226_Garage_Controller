@@ -77,7 +77,7 @@ A ProtoPak of 10 is $11.95 at the time I posted this.
     1. If captive DNS does not work browse to http://192.168.4.1
     1. You should now see the wifi setup page. Enter your device name, your WiFi network SSID and password
        at a minimum and "save" the configuration.
-       **Note:** To enable authentication to the web interface, you must enter a password for the admin user. (I recommend leaving the password blank till your up and running, but don't forget to add it.)
+       **Note:** To enable authentication to the web interface, you must enter a password for the admin user. (I recommend leaving the password blank till you're up and running, but don't forget to add it.)
     1. Restart your ESP.
 1. Now your ESP should be connected to your WiFi network.
     1. Browse to http://device_name.local  (device_name will be what you configured above)
