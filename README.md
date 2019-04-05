@@ -70,23 +70,23 @@ NOTE: See DoorSetup.png from the "info" folder to see how the controller sends u
 
 **Initial Setup:**
 
-1) Once you have flashed the ESP8266, restart the ESP.
-2) Since there is no WiFi setup, the ESP will start in AP mode.
-  a) Use your phone or tablet to connect to your ESP's WiFi SSID. (Something like "myespxxx")
-  b) If your device works with captive DNS you can web browse to any url and get redirected to the ESP.
-  c) If captive DNS does not work browse to http://192.168.4.1
-  d) You should now see the wifi setup page. Enter your device name, your WiFi network SSID and password
+* 1) Once you have flashed the ESP8266, restart the ESP.
+* 2) Since there is no WiFi setup, the ESP will start in AP mode.
+*  a) Use your phone or tablet to connect to your ESP's WiFi SSID. (Something like "myespxxx")
+*  b) If your device works with captive DNS you can web browse to any url and get redirected to the ESP.
+*  c) If captive DNS does not work browse to http://192.168.4.1
+*  d) You should now see the wifi setup page. Enter your device name, your WiFi network SSID and password
      at a minimum and "save" the configuration.
      Note: To enable authentication to the web interface, you must enter a password for the admin user. (I recommend leaving the password blank till your up and running, but don't forget to add it.)
-  e) Restart your ESP.
-3) Now your ESP should be connected to your WiFi network.
-  a) Browse to http://device_name.local  (device_name will be what you configured above)
-  b) The integrated filebrowser should now show up.  If not browse to http://device_name.local/browse.
-  c) Drag and Drop each of the files in the "html" folder to add them to the SPIFFS file system.
-  d) You should already see some files that are auto added by the myWebServerAsync library.
-  e) Restart your ESP.
-4) Browse to http://device_name.local/doorsetup.html
-  a) Configure your doors as appropriate. See DoorSetup.png from the "info" folder for an example.
-  b) Save the config.
-  c) Restart ESP.
+*  e) Restart your ESP.
+* 3) Now your ESP should be connected to your WiFi network.
+*  a) Browse to http://device_name.local  (device_name will be what you configured above)
+*  b) The integrated filebrowser should now show up.  If not browse to http://device_name.local/browse.
+*  c) Drag and Drop each of the files in the "html" folder to add them to the SPIFFS file system.
+*  d) You should already see some files that are auto added by the myWebServerAsync library.
+*  e) Restart your ESP.
+* 4) Browse to http://device_name.local/doorsetup.html
+*  a) Configure your doors as appropriate. See DoorSetup.png from the "info" folder for an example.
+*  b) Save the config.
+*  c) Restart ESP.
 
