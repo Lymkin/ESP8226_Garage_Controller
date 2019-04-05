@@ -70,9 +70,9 @@ NOTE: See DoorSetup.png from the "info" folder to see how the controller sends u
 
 **Initial Setup:**
 
-* 1) Once you have flashed the ESP8266, restart the ESP.
-* 2) Since there is no WiFi setup, the ESP will start in AP mode.
-*  a) Use your phone or tablet to connect to your ESP's WiFi SSID. (Something like "myespxxx")
+1. Once you have flashed the ESP8266, restart the ESP.
+1. Since there is no WiFi setup, the ESP will start in AP mode.
+  1. Use your phone or tablet to connect to your ESP's WiFi SSID. (Something like "myespxxx")
 *  b) If your device works with captive DNS you can web browse to any url and get redirected to the ESP.
 *  c) If captive DNS does not work browse to http://192.168.4.1
 *  d) You should now see the wifi setup page. Enter your device name, your WiFi network SSID and password
