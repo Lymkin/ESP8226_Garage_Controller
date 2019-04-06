@@ -451,27 +451,6 @@ bool SensorsChanged()  //Check if any door states have changed
 void WriteCurrentConfig()  //Write current state information and configuration to "setup.json"
 {
   String jsonString = "";
-//  jsonString = "{\"door1enable\":\"" + String(CurDoor1Enable) + "\",";
-//  jsonString += "\"door1name\":\"" + CurDoor1Name + "\",";
-//  jsonString += "\"door1state\":\"" + String(CurDoor1State) + "\",";
-//  jsonString += "\"door1relay\":\"" + String(CurDoor1Relay) + "\",";
-//  jsonString += "\"door2enable\":\"" + String(CurDoor2Enable) + "\",";
-//  jsonString += "\"door2name\":\"" + CurDoor2Name + "\",";
-//  jsonString += "\"door2state\":\"" + String(CurDoor2State) + "\",";
-//  jsonString += "\"door2relay\":\"" + String(CurDoor2Relay) + "\",";
-//  jsonString += "\"door3enable\":\"" + String(CurDoor3Enable) + "\",";
-//  jsonString += "\"door3name\":\"" + CurDoor3Name + "\",";
-//  jsonString += "\"door3state\":\"" + String(CurDoor3State) + "\",";
-//  jsonString += "\"door3relay\":\"" + String(CurDoor3Relay) + "\",";
-//  jsonString += "\"safeip\":\"" + String(SafeIP) + "\",";
-//  jsonString += "\"safeport\":\"" + String(SafePort) + "\",";
-//  jsonString += "\"method\":\"" + String(Method) + "\",";
-//  jsonString += "\"openbody\":\"" + String(OpenBody) + "\",";
-//  jsonString += "\"closebody\":\"" + String(CloseBody) + "\",";
-//  jsonString += "\"door1url\":\"" + String(Door1Url) + "\",";
-//  jsonString += "\"door2url\":\"" + String(Door2Url) + "\",";
-//  jsonString += "\"door3url\":\"" + String(Door3Url) + "\"";
-//  jsonString += "}";
   DynamicJsonBuffer jsonBuffer;
   JsonObject& root = jsonBuffer.createObject();
   root["door1enable"] = String(CurDoor1Enable);
