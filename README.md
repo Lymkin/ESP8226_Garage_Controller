@@ -14,7 +14,7 @@ https://dirtypcbs.com/store/designer/details/10941/6271/esp8266-garage-controlle
 
 A ProtoPak of 10 is $11.95 at the time I posted this.
 
-![Web Front End](info/OneDoorOpen.png)
+![Web Front End](info/OneDoorOpen.PNG)
 
 **Home Assistant Integration Example:**
 
